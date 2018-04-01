@@ -12,7 +12,7 @@ title: checkbox 多选
 | 属性名 | 类型 | 默认值 | 说明 |
 |---|---|---|---|
 | change| Function |  | checkbox选中和取消的回调 |
-| <del> checkbox-group `required` |  |  | 用于包围一组xcore-checkbox,该标签上的bind-change表表示每一个子checkbox发生变化后的回调          |
+| <del> checkbox-group `required` |  |  | 用于包围一组checkbox,该标签上的bind-change表表示每一个子checkbox发生变化后的回调          |
 | <del> checked| Boolean | false | checkbox的选中状态 |
 | <del> disabled | Boolean | false | 禁止单击后的状态 |
 | <del> name | String |  | 用于标识checkbox |

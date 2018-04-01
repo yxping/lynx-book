@@ -92,7 +92,7 @@ $ lynx debug androd app
 
 Lynx的工程配置信息全部存储在`manfiest.json`中，文件包含了项目名称，包名，页面信息等等
 
-```
+```json
 
 {
 
