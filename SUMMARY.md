@@ -32,3 +32,6 @@
   * [Swiper](components/swiper.md)
   * [Textarea](components/textarea.md)
   * [View](components/view.md)
+  * [ViewStub](components/viewstub.md)
+* Desgin Document
+  * [JS基础API](desgin-doc/js-binding/js-binding-part1.md)
