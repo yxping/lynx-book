@@ -498,20 +498,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.12" data-path="switch.html">
-            
-                <a href="switch.html">
-            
-                    
-                    Switch
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.9.13" data-path="textarea.html">
+        <li class="chapter " data-level="1.9.12" data-path="textarea.html">
             
                 <a href="textarea.html">
             
@@ -524,12 +511,57 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9.14" data-path="view.html">
+        <li class="chapter " data-level="1.9.13" data-path="view.html">
             
                 <a href="view.html">
             
                     
                     View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="viewstub.html">
+            
+                <a href="viewstub.html">
+            
+                    
+                    ViewStub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Desgin Document
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../desgin-doc/js-binding/js-binding-part1.html">
+            
+                <a href="../desgin-doc/js-binding/js-binding-part1.html">
+            
+                    
+                    JS基础API
             
                 </a>
             
@@ -588,7 +620,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h2 id="radio-&#x5355;&#x9009;">radio &#x5355;&#x9009;</h2>
-<p>&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x9009;&#x9879;&#x4E2D;&#x53EA;&#x80FD;&#x9009;&#x4E2D;&#x4E00;&#x4E2A;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5355;&#x9009;</p>
+<p>&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x9009;&#x9879;&#x4E2D;&#x53EA;&#x80FD;&#x9009;&#x4E2D;&#x4E00;&#x4E2A;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5355;&#x9009;&#x3002;&#x6B64;&#x63A7;&#x4EF6;&#x5B8C;&#x5168;&#x7531;&#x524D;&#x7AEF;&#x5B9E;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>lynx-components</code>&#x83B7;&#x53D6;</p>
 <h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
 <table>
 <thead>
@@ -607,37 +639,114 @@
 <td>radio&#x7684;&#x9009;&#x4E2D;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
-<td><del> disabled</del></td>
+<td>disabled</td>
 <td>Boolean</td>
 <td>false</td>
 <td>&#x7981;&#x6B62;&#x5355;&#x51FB;&#x540E;&#x7684;&#x72B6;&#x6001;</td>
 </tr>
 <tr>
-<td><del> name</del></td>
+<td>name</td>
 <td>String</td>
 <td></td>
 <td>&#x7528;&#x4E8E;&#x6807;&#x8BC6;checkbox</td>
 </tr>
 <tr>
-<td><del> picArray  <code>required</code></del></td>
+<td>pic-array  <code>required</code></td>
 <td>Array</td>
 <td></td>
 <td>&#x6709;&#x4E09;&#x4E2A;&#x56FE;&#x7247;&#xFF0C;&#x5206;&#x522B;&#x662F;radio&#x6B63;&#x5E38;&#x56FE;&#x7247;&#xFF0C;&#x5355;&#x51FB;&#x540E;&#x56FE;&#x7247;&#xFF0C;&#x7981;&#x6B62;&#x72B6;&#x6001;&#x663E;&#x793A;&#x7684;&#x56FE;&#x7247;</td>
 </tr>
 <tr>
-<td><del> width</del></td>
+<td>width</td>
 <td>Number</td>
 <td>48</td>
 <td>&#x56FE;&#x7247;&#x5BBD;&#x5EA6;</td>
 </tr>
 <tr>
-<td><del> height</del></td>
+<td>height</td>
 <td>Number</td>
 <td>48</td>
 <td>&#x56FE;&#x7247;&#x9AD8;&#x5EA6;</td>
 </tr>
 </tbody>
 </table>
+<h3 id="&#x4F8B;&#x5B50;">&#x4F8B;&#x5B50;</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">radio-group</span> <span class="hljs-attr">:bind-change</span>=<span class="hljs-string">&quot;changeHandle&quot;</span> <span class="hljs-attr">ref</span>=<span class="hljs-string">&quot;radioGroup&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">radio</span>  <span class="hljs-attr">:checked</span>=<span class="hljs-string">&quot;item.checked&quot;</span> <span class="hljs-attr">:name</span>=<span class="hljs-string">&quot;item.name&quot;</span> <span class="hljs-attr">:pic-array</span>=<span class="hljs-string">&quot;picArray&quot;</span> <span class="hljs-attr">:disabled</span>=<span class="hljs-string">&quot;item.disabled&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">radio</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;itemLabel&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>{{item.value}}<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">radio-group</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+
+<span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">flex-direction</span>: column;
+  <span class="hljs-attribute">background-color</span>: white;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">750</span>
+}
+  <span class="hljs-selector-class">.group</span> {
+    <span class="hljs-attribute">flex-direction</span>: column;
+  }
+  <span class="hljs-selector-class">.itemLabel</span> {
+    <span class="hljs-attribute">justify-content</span>: center;
+    <span class="hljs-attribute">align-items</span>: center
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">const</span> items = [
+    {
+      name:<span class="hljs-string">&apos;HZ&apos;</span>,
+      value:<span class="hljs-string">&apos;&#x676D;&#x5DDE;&apos;</span>,
+      checked:<span class="hljs-literal">true</span>,
+      disabled:<span class="hljs-literal">true</span>
+    },
+    {
+      name:<span class="hljs-string">&apos;SH&apos;</span>,
+      value:<span class="hljs-string">&apos;&#x4E0A;&#x6D77;&apos;</span>,
+      checked:<span class="hljs-literal">false</span>,
+      disabled:<span class="hljs-literal">false</span>
+    },
+    {
+      name:<span class="hljs-string">&apos;BJ&apos;</span>,
+      value:<span class="hljs-string">&apos;&#x5317;&#x4EAC;&apos;</span>,
+      checked:<span class="hljs-literal">false</span>,
+      disabled:<span class="hljs-literal">false</span>
+    }
+  ]
+
+<span class="hljs-keyword">const</span> picArray = [
+  <span class="hljs-string">&apos;assets/radio-uncheck.png&apos;</span>,
+  <span class="hljs-string">&apos;assets/radio-checked.png&apos;</span>,
+  <span class="hljs-string">&apos;assets/radio-disable.png&apos;</span>]
+
+<span class="hljs-keyword">import</span> {Radio, RadioGroup} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lynx-components&apos;</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  components: {
+    Radio,
+    RadioGroup
+  },
+  data() {
+    <span class="hljs-keyword">return</span> {
+      items,
+      picArray
+    }
+  },
+  methods: {
+    changeHandle (item) {
+      <span class="hljs-built_in">console</span>.log(item.picArray)
+      <span class="hljs-built_in">console</span>.log(item.name)
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
 
                                 
                                 </section>
@@ -681,7 +790,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Radio","level":"1.9.8","depth":2,"next":{"title":"ScrollView","level":"1.9.9","depth":2,"path":"components/scrollview.md","ref":"components/scrollview.md","articles":[]},"previous":{"title":"Label","level":"1.9.7","depth":2,"path":"components/label.md","ref":"components/label.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"components/radio.md","mtime":"2018-03-28T10:25:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-01T01:50:57.818Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Radio","level":"1.9.8","depth":2,"next":{"title":"ScrollView","level":"1.9.9","depth":2,"path":"components/scrollview.md","ref":"components/scrollview.md","articles":[]},"previous":{"title":"Label","level":"1.9.7","depth":2,"path":"components/label.md","ref":"components/label.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"components/radio.md","mtime":"2018-04-16T02:48:22.333Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-16T02:54:02.854Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
