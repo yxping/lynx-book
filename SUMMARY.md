@@ -30,6 +30,5 @@
   * [ScrollView](components/scrollview.md)
   * [Slider](components/slider.md)
   * [Swiper](components/swiper.md)
-  * [Switch](components/switch.md)
   * [Textarea](components/textarea.md)
   * [View](components/view.md)

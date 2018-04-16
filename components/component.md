@@ -31,7 +31,7 @@ Lynx组件在开发上同前端框架Vue的写法类似，主要包括三部分�
 | [view](./view.md) | 列表视图|
 | [scrollview](./scrollview.md)  | 滚动视图 |
 | [<del>listview-shadow]()  | shadow视图 |
-| [<del>viewstub](./viewstub.md)  | 排版视图 |
+| [viewstub](./viewstub.md)  | 排版视图 |
 | [swiper](./swiper.md)  | page切换组件 |
 | [slide](./slide.md)  | 拖动条 |
 
@@ -58,5 +58,4 @@ Lynx组件在开发上同前端框架Vue的写法类似，主要包括三部分�
 | [textarea](./textarea.md)  | 多行输入 |
 | [checkbox](./checkbox.md)  | checkbox组件支持多选, <del>支持双向绑定 |
 | [radio](./radio.md) | 用于多个选项中只能选中一个的情况,单选, <del>支持双向绑定</del> |
-| [switch](./swtich.md) | 用于switch切换 |
 
