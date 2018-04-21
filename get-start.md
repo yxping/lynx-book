@@ -25,7 +25,7 @@ $ npm install
 $ lynx build
 $ lynx debug android app 
 ```
-<img src="./hello.png" width = "25%"/>
+<img src="./images/hello.png" width = "25%"/>
 
 
 ##项目的结构
