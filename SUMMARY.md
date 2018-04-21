@@ -17,7 +17,7 @@
 * 动画
   - [普通动画](animation/animation.md)
   - [交互动画](animation/interactive-animation.md)
-  - [Lepus引擎](animation/lepus.md)
+  - [Lepus引擎](design-doc/lepus.md)
 * [Components](components/component.md)
   * [Body](components/body.md)
   * [Button](components/button.md)
@@ -33,5 +33,7 @@
   * [Textarea](components/textarea.md)
   * [View](components/view.md)
   * [ViewStub](components/viewstub.md)
-* Desgin Document
-  * [JS基础API](desgin-doc/js-binding/js-binding-part1.md)
+* [Design Document](design-doc/lynx-native-design.md)
+  * [JS引擎扩展基础](design-doc/js-binding/js-binding-part1.md)
+  * [JNI](design-doc/jni.md)
+* [相关工程配置](design-doc/project.md)
