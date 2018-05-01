@@ -5,7 +5,7 @@
 [Lynx](https://github.com/hxxft/lynx-native)内核是由C++编写，方便跨平台使用。这样在Android端与Java层通信就需要使用JNI，Lynx在JNI层为了避免直接手写JNI注册代码以及反射调用Java的代码，使用自动化的方式来自动生成这部分代码。
 
 ### JNI的注册方式
-#####1. Java调用C/C++方法
+##### 1. Java调用C/C++方法
 
 通常Java调用C/C++方法的JNI方法注册分为静态注册和动态注册两种。
 
@@ -71,7 +71,7 @@ JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *jvm, void *reserved) {
 
 动态注册是Lynx JNI的基础，后面展开介绍。 
 
-#####2. C/C++调用Java方法
+##### 2. C/C++调用Java方法
 
 JNI的C代码调用Java代码。实现原理：使用JNI提供的反射接口来反射得到Java方法，进行调用。以Lynx代码中的文本测量的代码<span id="LabelMeasurer">LabelMeasurer.java</span>为例
 
