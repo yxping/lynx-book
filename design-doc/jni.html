@@ -1,0 +1,993 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JNI · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="project.html" />
+    
+    
+    <link rel="prev" href="js-binding/js-binding-part2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../how-to-build.html">
+            
+                <a href="../how-to-build.html">
+            
+                    
+                    How to Build
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../get-start.html">
+            
+                <a href="../get-start.html">
+            
+                    
+                    Get Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../roadmap.html">
+            
+                <a href="../roadmap.html">
+            
+                    
+                    Road Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../css.html">
+            
+                <a href="../css.html">
+            
+                    
+                    CSS支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../method_export.html">
+            
+                <a href="../method_export.html">
+            
+                    
+                    拓展方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../apis/global-apis.html">
+            
+                <a href="../apis/global-apis.html">
+            
+                    
+                    全局API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../apis/window.html">
+            
+                <a href="../apis/window.html">
+            
+                    
+                    Window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../apis/navigator.html">
+            
+                <a href="../apis/navigator.html">
+            
+                    
+                    Navigator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../apis/screen.html">
+            
+                <a href="../apis/screen.html">
+            
+                    
+                    Screen
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../apis/loader.html">
+            
+                <a href="../apis/loader.html">
+            
+                    
+                    Loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../apis/document.html">
+            
+                <a href="../apis/document.html">
+            
+                    
+                    Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../apis/element.html">
+            
+                <a href="../apis/element.html">
+            
+                    
+                    Element
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../apis/extened-apis.html">
+            
+                <a href="../apis/extened-apis.html">
+            
+                    
+                    拓展API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../apis/pagenavigator.html">
+            
+                <a href="../apis/pagenavigator.html">
+            
+                    
+                    Page Navigator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    动画
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../animation/animation.html">
+            
+                <a href="../animation/animation.html">
+            
+                    
+                    普通动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../animation/interactive-animation.html">
+            
+                <a href="../animation/interactive-animation.html">
+            
+                    
+                    交互动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="lepus.html">
+            
+                <a href="lepus.html">
+            
+                    
+                    Lepus引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../components/component.html">
+            
+                <a href="../components/component.html">
+            
+                    
+                    Components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../components/body.html">
+            
+                <a href="../components/body.html">
+            
+                    
+                    Body
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../components/button.html">
+            
+                <a href="../components/button.html">
+            
+                    
+                    Button
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../components/cell.html">
+            
+                <a href="../components/cell.html">
+            
+                    
+                    Cell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../components/checkbox.html">
+            
+                <a href="../components/checkbox.html">
+            
+                    
+                    Checkbox
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../components/image.html">
+            
+                <a href="../components/image.html">
+            
+                    
+                    Image
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../components/input.html">
+            
+                <a href="../components/input.html">
+            
+                    
+                    Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../components/label.html">
+            
+                <a href="../components/label.html">
+            
+                    
+                    Label
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../components/radio.html">
+            
+                <a href="../components/radio.html">
+            
+                    
+                    Radio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../components/scrollview.html">
+            
+                <a href="../components/scrollview.html">
+            
+                    
+                    ScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../components/slider.html">
+            
+                <a href="../components/slider.html">
+            
+                    
+                    Slider
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../components/swiper.html">
+            
+                <a href="../components/swiper.html">
+            
+                    
+                    Swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../components/textarea.html">
+            
+                <a href="../components/textarea.html">
+            
+                    
+                    Textarea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../components/view.html">
+            
+                <a href="../components/view.html">
+            
+                    
+                    View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.14" data-path="../components/viewstub.html">
+            
+                <a href="../components/viewstub.html">
+            
+                    
+                    ViewStub
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="lynx-native-design.html">
+            
+                <a href="lynx-native-design.html">
+            
+                    
+                    Design Document
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="js-binding/js-binding-part1.html">
+            
+                <a href="js-binding/js-binding-part1.html">
+            
+                    
+                    JS引擎扩展基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="js-binding/js-binding-part2.html">
+            
+                <a href="js-binding/js-binding-part2.html">
+            
+                    
+                    JS引擎扩展进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11.3" data-path="jni.html">
+            
+                <a href="jni.html">
+            
+                    
+                    JNI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="project.html">
+            
+                <a href="project.html">
+            
+                    
+                    相关工程配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >JNI</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x81EA;&#x52A8;&#x751F;&#x6210;jni&#x4EE3;&#x7801;">&#x81EA;&#x52A8;&#x751F;&#x6210;JNI&#x4EE3;&#x7801;</h2>
+<p><a href="https://github.com/hxxft/lynx-native" target="_blank">Lynx</a>&#x5185;&#x6838;&#x662F;&#x7531;C++&#x7F16;&#x5199;&#xFF0C;&#x65B9;&#x4FBF;&#x8DE8;&#x5E73;&#x53F0;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x6837;&#x5728;Android&#x7AEF;&#x4E0E;Java&#x5C42;&#x901A;&#x4FE1;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;JNI&#xFF0C;Lynx&#x5728;JNI&#x5C42;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x76F4;&#x63A5;&#x624B;&#x5199;JNI&#x6CE8;&#x518C;&#x4EE3;&#x7801;&#x4EE5;&#x53CA;&#x53CD;&#x5C04;&#x8C03;&#x7528;Java&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x8FD9;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x3002;</p>
+<h3 id="jni&#x7684;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;">JNI&#x7684;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;</h3>
+<h5 id="1-java&#x8C03;&#x7528;cc&#x65B9;&#x6CD5;">1. Java&#x8C03;&#x7528;C/C++&#x65B9;&#x6CD5;</h5>
+<p>&#x901A;&#x5E38;Java&#x8C03;&#x7528;C/C++&#x65B9;&#x6CD5;&#x7684;JNI&#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x5206;&#x4E3A;&#x9759;&#x6001;&#x6CE8;&#x518C;&#x548C;&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x4E24;&#x79CD;&#x3002;</p>
+<ul>
+<li>&#x9759;&#x6001;&#x6CE8;&#x518C;&#x7684;&#x65B9;&#x5F0F;</li>
+</ul>
+<p>&#x5C06;Java&#x4E2D;&#x7684;Native&#x65B9;&#x6CD5;&#x5728;C/C++&#x6587;&#x4EF6;&#x58F0;&#x660E;&#x5BF9;&#x5E94;&#x6210;Java_$PackageName_$MethodName(JNIEnv *env,  args&#x2026;) &#x5B8C;&#x6210;&#x5B8C;&#x6210;&#x9759;&#x6001;&#x6CE8;&#x518C;&#x3002;&#x4EE5;Lynx&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x6D4B;&#x8BD5;&#x6A21;&#x5757;&#x4EE3;&#x7801;<span id="GTestDriver">GTestDriver.java</span>&#x4E3A;&#x4F8B;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.lynx.gtest;
+
+...
+
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GTestDriver</span> </span>{
+    ...
+    <span class="hljs-comment">//java native &#x65B9;&#x6CD5;</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">native</span> <span class="hljs-keyword">int</span> <span class="hljs-title">nativeRunGTestsNative</span><span class="hljs-params">(String[] gtestCmdLineArgs)</span></span>;
+}
+</code></pre>
+<p>  &#x5BF9;&#x4E8E;C&#x65B9;&#x6CD5;&#x7684;&#x7F16;&#x5199;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-c++">#include &lt;jni.h&gt;
+...
+JNIEXPORT jint Java_com_lynx_gtest_nativeRunGTestsNative(JNIEnv *env, jobjectArray gtestCmdLineArgs)
+...
+</code></pre>
+<p>&#x4ECE;&#x4F8B;&#x5B50;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x9759;&#x6001;&#x6CE8;&#x518C;&#x7684;&#x540D;&#x5B57;&#x975E;&#x5E38;&#x957F;&#xFF0C;&#x4E0D;&#x4FBF;&#x4E8E;&#x4E66;&#x5199;&#x3002;&#x5E76;&#x4E14;&#x5728;&#x521D;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x4F9D;&#x636E;&#x540D;&#x5B57;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x5927;&#x578B;&#x5DE5;&#x7A0B;&#x4E2D;&#x65B9;&#x6CD5;&#x6570;&#x591A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6548;&#x7387;&#x4F4E;&#x4E14;&#x6613;&#x51FA;&#x9519;&#x3002;</p>
+<ul>
+<li>&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;</li>
+</ul>
+<p>&#x901A;&#x8FC7;&#x5728;C/C++&#x4E2D;&#x58F0;&#x660E;&#x4E00;&#x4E2A;JNINativeMethod nativeMethod[]&#x6570;&#x7EC4;&#xFF0C;&#x7136;&#x540E;&#x5728;JNI_OnLoad&#x4E2D;&#x8C03;&#x7528;RegisterNatives&#x65B9;&#x6CD5;&#x6765;&#x5B8C;&#x6210;&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x3002;&#x8B6C;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x7528;&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x7684;&#x65B9;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;jni.h&gt;</span></span>
+...
+<span class="hljs-function"><span class="hljs-keyword">static</span> jint <span class="hljs-title">RunGTestsNative</span><span class="hljs-params">(JNIEnv *env,  jclass jcaller, jobjectArray gtestCmdLineArgs)</span> </span>{
+....
+}
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> JNINativeMethod kMethodsGTestDriver[] = {
+    { <span class="hljs-string">&quot;nativeRunGTestsNative&quot;</span>,
+      <span class="hljs-string">&quot;(&quot;</span>
+      <span class="hljs-string">&quot;[Ljava/lang/String;&quot;</span>
+      <span class="hljs-string">&quot;)&quot;</span>
+      <span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-keyword">reinterpret_cast</span>&lt;<span class="hljs-keyword">void</span>*&gt;(RunGTestsNative) },
+};
+...
+<span class="hljs-function">JNIEXPORT jint JNICALL <span class="hljs-title">JNI_OnLoad</span><span class="hljs-params">(JavaVM *jvm, <span class="hljs-keyword">void</span> *reserved)</span> </span>{
+    JNIEnv *env;
+    <span class="hljs-keyword">if</span> ((*jvm) -&gt; GetEnv(jvm, (<span class="hljs-keyword">void</span>**) &amp;env, JNI_VERSION_1_6) != JNI_OK) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+
+    jclass clz = (*env) -&gt; FindClass(env, <span class="hljs-string">&quot;com/lynx/gtest/GTestDriver&quot;</span>);
+
+    (*env) -&gt; RegisterNatives(env, clz, kMethodsGTestDriver, <span class="hljs-keyword">sizeof</span>(kMethodsGTestDriver) / <span class="hljs-keyword">sizeof</span>(kMethodsGTestDriver[<span class="hljs-number">0</span>]));
+
+    <span class="hljs-keyword">return</span> JNI_VERSION_1_6;
+}
+</code></pre>
+<p>&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x662F;Lynx JNI&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x540E;&#x9762;&#x5C55;&#x5F00;&#x4ECB;&#x7ECD;&#x3002; </p>
+<h5 id="2-cc&#x8C03;&#x7528;java&#x65B9;&#x6CD5;">2. C/C++&#x8C03;&#x7528;Java&#x65B9;&#x6CD5;</h5>
+<p>JNI&#x7684;C&#x4EE3;&#x7801;&#x8C03;&#x7528;Java&#x4EE3;&#x7801;&#x3002;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF1A;&#x4F7F;&#x7528;JNI&#x63D0;&#x4F9B;&#x7684;&#x53CD;&#x5C04;&#x63A5;&#x53E3;&#x6765;&#x53CD;&#x5C04;&#x5F97;&#x5230;Java&#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#x3002;&#x4EE5;Lynx&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6587;&#x672C;&#x6D4B;&#x91CF;&#x7684;&#x4EE3;&#x7801;<span id="LabelMeasurer">LabelMeasurer.java</span>&#x4E3A;&#x4F8B;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.lynx.core;
+...
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LabelMeasurer</span> </span>{
+    ...
+    <span class="hljs-meta">@CalledByNative</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Size <span class="hljs-title">measureLabelSize</span><span class="hljs-params">(String text, Style style, <span class="hljs-keyword">int</span> width,
+                                        <span class="hljs-keyword">int</span> widthMode, <span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> heightMode)</span> </span>{
+        ...
+    }
+}
+</code></pre>
+<p>&#x5728;C/C++&#x4EE3;&#x7801;&#x4E2D;&#x8C03;&#x7528;measureLabelSize&#x9700;&#x8981;&#x901A;&#x8FC7;&#x53CD;&#x5C04;&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x57FA;&#x672C;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// &#x67E5;&#x627E;LabelMeasurer&#x7C7B;</span>
+jclass clazz = (*env)-&gt;FindClass(env,<span class="hljs-string">&quot;com/lynx/core/LabelMeasurer&quot;</span>);
+
+<span class="hljs-comment">//&#x83B7;&#x53D6;measureLabelSize&#x65B9;&#x6CD5;</span>
+jmethodID method = (*env)-&gt;GetMethodID(env,clazz, <span class="hljs-string">&quot;measureLabelSize&quot;</span>, <span class="hljs-string">&quot;(Ljava/lang/String;Lcom/lynx/base/Style;IIII)Lcom/lynx/base/Size;&quot;</span>);
+
+<span class="hljs-comment">//&#x6267;&#x884C;</span>
+jobject ret = env-&gt;CallStaticObjectMethod(clazz, method, text, style,
+                                          width, widthMode, height, heightMode);
+</code></pre>
+<p>&#x7F16;&#x5199;&#x8FD9;&#x6837;&#x7684;&#x8C03;&#x7528;&#x4F1A;&#x6709;&#x975E;&#x5E38;&#x591A;&#x7684;&#x91CD;&#x590D;&#x4EE3;&#x7801;&#xFF0C;&#x5F53;&#x63A5;&#x53E3;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x65F6;&#x975E;&#x5E38;&#x4E0D;&#x65B9;&#x4FBF;&#x3002;</p>
+<h3 id="lynx-jni-&#x81EA;&#x52A8;&#x751F;&#x6210;&#x65B9;&#x5F0F;">Lynx JNI &#x81EA;&#x52A8;&#x751F;&#x6210;&#x65B9;&#x5F0F;</h3>
+<p>&#x4ECE;&#x4E0A;&#x8FF0;&#x4ECB;&#x7ECD;&#x53EF;&#x5F97;&#xFF0C;JNI&#x7684;&#x6CE8;&#x518C;&#x662F;&#x4E00;&#x4E2A;&#x91CD;&#x590D;&#x6027;&#x7684;&#x64CD;&#x4F5C;&#x3002;Lynx&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x5C06;JNI&#x7684;&#x6CE8;&#x518C;&#x4EA4;&#x7531;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x751F;&#x6210;&#x3002;</p>
+<h5 id="1-java&#x8C03;&#x7528;cc&#x65B9;&#x6CD5;">1. Java&#x8C03;&#x7528;C/C++&#x65B9;&#x6CD5;</h5>
+<p>Lynx&#x4E0A;&#x5BF9;Native&#x6CE8;&#x518C;&#x8FDB;&#x884C;&#x4E86;&#x7EA6;&#x5B9A;&#xFF0C;&#x6240;&#x6709;&#x5BF9;Java&#x6CE8;&#x518C;&#x7684;Native&#x65B9;&#x6CD5;&#x90FD;&#x4EE5;native&#x5F00;&#x5934;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x4F1A;&#x5728;Java&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x4EE5;<a href="#GTestDriver">GTestDriver.java</a>&#x4E3A;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;GTestDriver&#x4E2D;&#x5305;&#x542B;JNI&#x7684;Native&#x65B9;&#x6CD5;nativeRunGTestsNative&#xFF0C;&#x5E76;&#x4E14;&#x4EE5;&#x7EA6;&#x5B9A;&#x7684;native&#x5173;&#x952E;&#x5F00;&#x5934;&#x3002;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4F1A;&#x7531;prebuild.sh&#x811A;&#x672C;&#x6267;&#x884C;&#x751F;&#x6210;&#x4E00;&#x4E2A;GTestDriver_jni.h&#x7684;&#x5934;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> com_lynx_gtest_GTestDriver_JNI</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> com_lynx_gtest_GTestDriver_JNI</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;jni.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;base/android/android_jni.h&quot;</span></span>
+
+<span class="hljs-comment">// Step 1: forward declarations.</span>
+<span class="hljs-keyword">namespace</span> {
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> kGTestDriverClassPath[] = <span class="hljs-string">&quot;com/lynx/gtest/GTestDriver&quot;</span>;
+<span class="hljs-comment">// Leaking this jclass as we cannot use LazyInstance from some threads.</span>
+jclass g_GTestDriver_clazz = <span class="hljs-literal">NULL</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> GTestDriver_clazz(env) g_GTestDriver_clazz</span>
+
+}  <span class="hljs-comment">// namespace</span>
+
+<span class="hljs-function"><span class="hljs-keyword">static</span> jint <span class="hljs-title">RunGTestsNative</span><span class="hljs-params">(JNIEnv* env, jclass jcaller,
+    jobjectArray gtestCmdLineArgs)</span></span>;
+
+<span class="hljs-comment">// Step 2: method stubs.</span>
+
+<span class="hljs-comment">// Step 3: RegisterNatives.</span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> JNINativeMethod kMethodsGTestDriver[] = {
+    { <span class="hljs-string">&quot;nativeRunGTestsNative&quot;</span>,
+<span class="hljs-string">&quot;(&quot;</span>
+<span class="hljs-string">&quot;[Ljava/lang/String;&quot;</span>
+<span class="hljs-string">&quot;)&quot;</span>
+<span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-keyword">reinterpret_cast</span>&lt;<span class="hljs-keyword">void</span>*&gt;(RunGTestsNative) },
+};
+
+<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">RegisterNativesImpl</span><span class="hljs-params">(JNIEnv* env)</span> </span>{
+
+  g_GTestDriver_clazz = <span class="hljs-keyword">reinterpret_cast</span>&lt;jclass&gt;(env-&gt;NewGlobalRef(
+      base::android::GetClass(env, kGTestDriverClassPath).Get()));
+
+  <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> kMethodsGTestDriverSize =
+      <span class="hljs-keyword">sizeof</span>(kMethodsGTestDriver)/<span class="hljs-keyword">sizeof</span>(kMethodsGTestDriver[<span class="hljs-number">0</span>]);
+
+  <span class="hljs-keyword">if</span> (env-&gt;RegisterNatives(GTestDriver_clazz(env),
+                           kMethodsGTestDriver,
+                           kMethodsGTestDriverSize) &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>  <span class="hljs-comment">// com_lynx_gtest_GTestDriver_JNI</span></span>
+</code></pre>
+<p>Lynx&#x7684;JNI&#x4F7F;&#x7528;&#x7684;&#x52A8;&#x6001;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;Java&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;nativeRunGTestsNative&#x4E0E;RunGTestsNative&#x51FD;&#x6570;&#x6307;&#x9488;&#x5173;&#x8054;&#xFF0C;&#x8FD9;&#x6837;&#x5BF9;&#x5934;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;RunGTestsNative&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x5728;jni_onload&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;RegisterNativesImpl&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x5BF9;JNI&#x65B9;&#x6CD5;&#x7684;&#x5B8C;&#x6574;&#x6CE8;&#x518C;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x5F0F;&#x6BD4;&#x8D77;JNI&#x539F;&#x6709;&#x7684;&#x65B9;&#x5F0F;&#x4E5F;&#x7B80;&#x5355;&#x5F88;&#x591A;&#xFF0C;&#x9690;&#x85CF;&#x4E86;&#x5F88;&#x591A;&#x91CD;&#x590D;&#x6027;&#x8D28;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<h5 id="2-cc&#x8C03;&#x7528;java&#x65B9;&#x6CD5;">2. C/C++&#x8C03;&#x7528;Java&#x65B9;&#x6CD5;</h5>
+<p>Lynx&#x5BF9;C/C++&#x8C03;&#x7528;Java&#x65B9;&#x6CD5;&#x4E5F;&#x505A;&#x4E86;&#x5B9A;&#x4E49;&#xFF0C;&#x5982;&#x679C;&#x5728;Java&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x53EF;&#x4EE5;&#x88AB;C/C++&#x8C03;&#x7528;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x65B9;&#x6CD5;&#x524D;&#x52A0;&#x4E0A;@CalledByNative&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x6B65;&#x4F1A;&#x5728;java&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x76F8;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x540C;&#x6837;&#x4EE5;&#x4E0A;&#x6587;&#x4E2D;&#x7684;<a href="#LabelMeasurer">LabelMeasurer.java</a>&#x4E3A;&#x4F8B;&#x3002;</p>
+<p>&#x5728;Java&#x6587;&#x4EF6;&#x4E2D;&#x7533;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x88AB;C/C++&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;measureLabelSize&#x3002;&#x8FDB;&#x8FC7;prebuild.sh&#x811A;&#x672C;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x4F1A;&#x751F;&#x6210;LabelMeasurer_jni.h</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> com_lynx_core_LabelMeasurer_JNI</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> com_lynx_core_LabelMeasurer_JNI</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;jni.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;base/android/android_jni.h&quot;</span></span>
+
+<span class="hljs-comment">// Step 1: forward declarations.</span>
+<span class="hljs-keyword">namespace</span> {
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> kLabelMeasurerClassPath[] = <span class="hljs-string">&quot;com/lynx/core/LabelMeasurer&quot;</span>;
+<span class="hljs-comment">// Leaking this jclass as we cannot use LazyInstance from some threads.</span>
+jclass g_LabelMeasurer_clazz = <span class="hljs-literal">NULL</span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LabelMeasurer_clazz(env) g_LabelMeasurer_clazz</span>
+
+}  <span class="hljs-comment">// namespace</span>
+
+<span class="hljs-comment">// Step 2: method stubs.</span>
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">intptr_t</span> g_LabelMeasurer_measureLabelSize = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">static</span> base::android::ScopedLocalJavaRef&lt;jobject&gt;
+    Java_LabelMeasurer_measureLabelSize(JNIEnv* env, jstring text,
+    jobject style,
+    <span class="hljs-keyword">int</span> width,
+    <span class="hljs-keyword">int</span> widthMode,
+    <span class="hljs-keyword">int</span> height,
+    <span class="hljs-keyword">int</span> heightMode) {
+  jmethodID method_id =
+      base::android::GetMethod(
+      env, LabelMeasurer_clazz(env),
+      base::android::STATIC_METHOD,
+      <span class="hljs-string">&quot;measureLabelSize&quot;</span>,
+
+<span class="hljs-string">&quot;(&quot;</span>
+<span class="hljs-string">&quot;Ljava/lang/String;&quot;</span>
+<span class="hljs-string">&quot;Lcom/lynx/base/Style;&quot;</span>
+<span class="hljs-string">&quot;I&quot;</span>
+<span class="hljs-string">&quot;I&quot;</span>
+<span class="hljs-string">&quot;I&quot;</span>
+<span class="hljs-string">&quot;I&quot;</span>
+<span class="hljs-string">&quot;)&quot;</span>
+<span class="hljs-string">&quot;Lcom/lynx/base/Size;&quot;</span>,
+      &amp;g_LabelMeasurer_measureLabelSize);
+
+  jobject ret =
+      env-&gt;CallStaticObjectMethod(LabelMeasurer_clazz(env),
+          method_id, text, style, <span class="hljs-keyword">int</span>(width), <span class="hljs-keyword">int</span>(widthMode), <span class="hljs-keyword">int</span>(height),
+              <span class="hljs-keyword">int</span>(heightMode));
+  base::android::CheckException(env);
+  <span class="hljs-keyword">return</span> base::android::ScopedLocalJavaRef&lt;jobject&gt;(env, ret);
+}
+
+<span class="hljs-comment">// Step 3: RegisterNatives.</span>
+
+<span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">RegisterNativesImpl</span><span class="hljs-params">(JNIEnv* env)</span> </span>{
+
+  g_LabelMeasurer_clazz = <span class="hljs-keyword">reinterpret_cast</span>&lt;jclass&gt;(env-&gt;NewGlobalRef(
+      base::android::GetClass(env, kLabelMeasurerClassPath).Get()));
+
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>  <span class="hljs-comment">// com_lynx_core_LabelMeasurer_JNI</span></span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F15;&#x5165;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x8C03;&#x7528;Java_LabelMeasurer_measureLabelSize&#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x3002;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x7B80;&#x4FBF;&#x7684;&#x3002;</p>
+<p>&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x7701;&#x53BB;&#x4E86;&#x7F16;&#x5199;&#x53CD;&#x5C04;&#x83B7;&#x53D6;&#x51FD;&#x6570;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;&#x8C03;&#x7528;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5168;&#x90E8;&#x6709;&#x811A;&#x672C;&#x76F4;&#x63A5;&#x751F;&#x6210;&#xFF0C;&#x5BF9;&#x4E8E;&#x83B7;&#x53D6;method id&#x7684;&#x65B9;&#x5F0F;&#xFF0C;Lynx&#x505A;&#x4E86;&#x4E00;&#x5C42;&#x5C01;&#x88C5;&#xFF0C;&#x53EF;&#x4EE5;&#x5BF9;method id&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#xFF0C;&#x8FD9;&#x6837;&#x67E5;&#x627E;&#x53EA;&#x4F1A;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#xFF0C;&#x8282;&#x7EA6;&#x6574;&#x4F53;&#x8C03;&#x7528;&#x65F6;&#x95F4; , &#x5177;&#x4F53;&#x53EF;&#x4EE5;base/android/android_jni.h &#x4E2D;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x540C;&#x65F6;Lynx&#x4E5F;&#x5BF9;jobject&#x8FDB;&#x884C;&#x4E86;&#x81EA;&#x52A8;&#x5F15;&#x7528;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x4E0D;&#x518D;&#x4F7F;&#x7528;jobject&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x81EA;&#x52A8;&#x8FDB;&#x884C;DeleteLocalRef&#xFF0C;&#x907F;&#x514D;&#x5FD8;&#x8BB0;&#x91CA;&#x653E;&#x540E;local ref&#x8FC7;&#x591A;&#x8D85;&#x51FA;&#x6700;&#x5927;&#x503C;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5177;&#x4F53;&#x53EF;&#x4EE5;&#x5728; base/android/scoped_java_ref.h &#x4E2D;&#x67E5;&#x770B;&#x3002;</p>
+<h3 id="&#x5982;&#x4F55;&#x5728;&#x5DF2;&#x6709;&#x5DE5;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x5728;&#x5DF2;&#x6709;&#x5DE5;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;</h3>
+<ol>
+<li><p>git clone <a href="https://github.com/hxxft/lynx-native.git" target="_blank">https://github.com/hxxft/lynx-native.git</a></p>
+</li>
+<li><p>&#x62BD;&#x53D6;&#x6240;&#x9700;&#x6587;&#x4EF6;&#x5E76;&#x5C06;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x5165;CMakeLists.txt</p>
+<blockquote>
+<p>base/android/android_jni.h </p>
+<p>base/android/android_jni.cc </p>
+<p>base/android/java_type.h</p>
+<p>base/android/java_type.cc</p>
+<p>base/android/scoped_java_ref.h</p>
+<p>base/android/scoped_java_ref.cc</p>
+</blockquote>
+</li>
+<li><p>&#x62BD;&#x53D6;build&#x6587;&#x4EF6;&#x5939;,&#x5C06;jni_load.cc&#x52A0;&#x5165;CMakeLists.txt&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x9700;&#x6C42;&#x4FEE;&#x6539;&#x6B64;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x4FEE;&#x6539;jni_files&#x52A0;&#x5165;&#x9700;&#x8981;&#x81EA;&#x52A8;&#x751F;&#x6210;JNI&#x4EE3;&#x7801;&#x7684;Java&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x7F16;&#x5199;Java&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x524D;&#x9762;&#x8BB2;&#x89E3;&#x65F6;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x6CE8;&#x91CA;&#x51FD;&#x6570;&#x6216;&#x8005;&#x4FEE;&#x9970;&#x65B9;&#x6CD5;</p>
+</li>
+<li><p>&#x4FEE;&#x6539;prebuild.sh&#x4E2D;ROOT_LYNX_JAVA_PATH&#x7B49;&#x8DEF;&#x5F84;&#xFF0C;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x5DE5;&#x7A0B;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x4FEE;&#x6539;</p>
+</li>
+<li><p>&#x5728;&#x7F16;&#x8BD1;&#x4E4B;&#x524D;&#x6267;&#x884C;prebuild.sh&#x751F;&#x6210;&#x6240;&#x9700;&#x8981;&#x7684;&#x6587;&#x4EF6;</p>
+</li>
+</ol>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;Lynx&#x7684;JNI&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x65B9;&#x6CD5;&#x7701;&#x53BB;&#x4E86;&#x5927;&#x90E8;&#x5206;&#x91CD;&#x590D;&#x4EE3;&#x7801;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x4EE5;&#x4E13;&#x6CE8;&#x4E8E;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4E0A;&#xFF0C;&#x5BF9;&#x9700;&#x8981;&#x4F7F;&#x7528;JNI&#x7684;&#x5DE5;&#x7A0B;&#x6765;&#x8BF4;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5DE8;&#x5927;&#x7684;&#x4FBF;&#x5229;&#x3002;</p>
+<p>&#x8BF7;&#x6301;&#x7EED;&#x5173;&#x6CE8; <a href="https://github.com/hxxft/lynx-native" target="_blank">Lynx</a>&#xFF0C;&#x4E00;&#x4E2A;&#x9AD8;&#x6027;&#x80FD;&#x8DE8;&#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x6846;&#x67B6;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="js-binding/js-binding-part2.html" class="navigation navigation-prev " aria-label="Previous page: JS引擎扩展进阶">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="project.html" class="navigation navigation-next " aria-label="Next page: 相关工程配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JNI","level":"1.11.3","depth":2,"next":{"title":"相关工程配置","level":"1.12","depth":1,"path":"design-doc/project.md","ref":"design-doc/project.md","articles":[]},"previous":{"title":"JS引擎扩展进阶","level":"1.11.2","depth":2,"path":"design-doc/js-binding/js-binding-part2.md","ref":"design-doc/js-binding/js-binding-part2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"design-doc/jni.md","mtime":"2018-04-24T10:13:20.288Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-15T07:57:34.213Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
