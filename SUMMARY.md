@@ -36,5 +36,6 @@
   * [ViewStub](components/viewstub.md)
 * [Design Document](design-doc/lynx-native-design.md)
   * [JS引擎扩展基础](design-doc/js-binding/js-binding-part1.md)
+  * [JS引擎扩展进阶](design-doc/js-binding/js-binding-part2.md)
   * [JNI](design-doc/jni.md)
 * [相关工程配置](design-doc/project.md)
